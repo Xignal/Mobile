@@ -18,26 +18,29 @@ angular.module('xignal')
                 }
             })
             .state('tab.graph', {
-                url: '^/xignal/graph',
+                url: '^/xignal/graph/:id',
                 views : {
                     'tab-home' : {
-                        templateUrl : 'app/components/xignal/xignal_index.html'
+                        templateUrl : 'app/components/xignal/xignal_index.html',
+                        controller: 'SurveyCtrl'
                     }
                 }
             })
             .state('tab.comments', {
-                url: '^/xignal/comments',
+                url: '^/xignal/comments/:id',
                 views : {
                     'tab-home' : {
-                        templateUrl : 'app/components/xignal/xignal_comments.html'
+                        templateUrl : 'app/components/xignal/xignal_comments.html',
+                        controller: 'SurveyCtrl'
                     }
                 }
             })
             .state('tab.contacts', {
-                url: '^/xignal/contacts',
+                url: '^/xignal/contacts/:id',
                 views : {
                     'tab-home' : {
-                        templateUrl : 'app/components/xignal/xignal_contacts.html'
+                        templateUrl : 'app/components/xignal/xignal_contacts.html',
+                        controller: 'SurveyCtrl'
                     }
                 }
             })
@@ -45,7 +48,8 @@ angular.module('xignal')
                 url: '^/create',
                 views : {
                     'tab-create' : {
-                        templateUrl : 'app/components/createXignal/create_xignal_index.html'
+                        templateUrl : 'app/components/createXignal/create_xignal_index.html',
+                        controller: 'CreateSurveyCtrl'
                     }
                 }
             })

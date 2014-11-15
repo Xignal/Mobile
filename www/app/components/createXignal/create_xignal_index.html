@@ -1,20 +1,21 @@
 <ion-view title="Create New Xignal">
-    <ion-content>
+    <ion-content class="createSurveyContent">
         <div class="list">
             <label class="item item-input item-stacked-label">
                 <!--<span class="input-label">Xignal title</span>-->
-                <input type="text" placeholder="Xignal title">
+                <input type="text" placeholder="Xignal title" ng-model="newSurveyData.name">
             </label>
             <label class="item item-input item-stacked-label">
                 <textarea
-                        ng-model=""
+                        ng-model="newSurveyData.description"
                         placeholder="Xignal description..."
                         ng-change=""
                         ></textarea>
             </label>
         </div>
         <div class="padding">
-            <button class="button button-block button-assertive" ui-sref="create">Create</button>
+            <button class="button button-block button-assertive" ui-sref="create" ng-click="createSurvey()">Create</button>
         </div>
+        <pre>{{ newSurveyData }}</pre>
     </ion-content>
 </ion-view>

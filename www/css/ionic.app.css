@@ -14,6 +14,18 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+.results .score {
+  text-align: center;
+  font-size: 10em;
+  line-height: 1em;
+  color: #9a9a9a; }
+.results .question {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.4em;
+  line-height: 1em;
+  color: #9a9a9a; }
+
 /*!
   Ionicons, v1.5.2
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/

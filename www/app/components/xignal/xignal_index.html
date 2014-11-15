@@ -1,12 +1,16 @@
-<ion-view title="Title goes here">
+<ion-view title="{{ survey.name }}">
     <ion-content>
-        <div class="padding">
+        <div class="padding results">
             <div class="button-bar">
-                <a class="button button-small" ui-sref="tab.graph">Graph</a>
-                <a class="button button-small" ui-sref="tab.comments">Comments</a>
-                <a class="button button-small" ui-sref="tab.contacts">Contacts</a>
+                <a class="button button-small" ui-sref="tab.graph({id: survey.id})">Results</a>
+                <!--<a class="button button-small" ui-sref="tab.comments({id: survey.id})">Comments</a>-->
+                <a class="button button-small" ui-sref="tab.contacts({id: survey.id})">Contacts</a>
             </div>
-            <p>[Comments go here]</p>
+            <h3>Question 1</h3>
+            <h5 class="question">{{ survey.questions[0].text }}</h5>
+            <p>OVERALL SCORE: From X responses.</p>
+            <div class="score">5.8</div>
+            <pre>{{ survey }}</pre>
         </div>
     </ion-content>
 </ion-view>

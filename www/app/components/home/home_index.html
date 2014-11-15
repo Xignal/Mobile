@@ -8,8 +8,8 @@
             <h3>Your Xignals</h3>
         </div>
         <ion-list>
-            <ion-item ng-repeat="item in testList" ui-sref="tab.graph">
-                {{item.name}}
+            <ion-item ng-repeat="xignal in xignals" ui-sref="tab.graph({id: xignal.id})">
+                {{xignal.name}}
             </ion-item>
         </ion-list>
 
