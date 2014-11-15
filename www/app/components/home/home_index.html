@@ -1,0 +1,17 @@
+<ion-view title="Home">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear">Create</button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="padding">
+            <h3>Your Xignals</h3>
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="item in testList" ui-sref="tab.graph">
+                {{item.name}}
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>
