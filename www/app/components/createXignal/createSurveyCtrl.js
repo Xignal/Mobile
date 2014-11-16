@@ -23,6 +23,7 @@ angular.module('CreateSurvey', [])
         function createSurvey() {
             api.createSurvey($scope.newSurveyData)
                 .then(function (data) {
+                    console.log('Reponse from create survey: ', data);
                     $state.go('tab.home');
                 }, function (err) {
                     console.log("Error: ", err);
