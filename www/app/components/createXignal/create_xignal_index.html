@@ -1,6 +1,6 @@
 <ion-view title="Create New Xignal">
-    <ion-content class="createSurveyContent">
-        <div class="list">
+    <ion-content>
+        <div class="list createSurveyContent">
             <label class="item item-input item-stacked-label">
                 <!--<span class="input-label">Xignal title</span>-->
                 <input type="text" placeholder="Xignal title" ng-model="newSurveyData.name">
@@ -14,7 +14,7 @@
             </label>
         </div>
         <div class="padding">
-            <button class="button button-block button-assertive" ui-sref="create" ng-click="createSurvey()">Create</button>
+            <button class="button button-block button-assertive" ng-click="createSurvey()">Create</button>
         </div>
         <pre>{{ newSurveyData }}</pre>
     </ion-content>

@@ -1,15 +1,17 @@
-<ion-view title="Home">
+<ion-view title="Your Xignals">
     <ion-nav-buttons side="right">
-        <button class="button button-clear">Create</button>
+        <button class="button button-clear" ui-sref="tab.create">Create</button>
     </ion-nav-buttons>
 
     <ion-content>
-        <div class="padding">
-            <h3>Your Xignals</h3>
-        </div>
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="refreshSurveys()">
+        </ion-refresher>
         <ion-list>
-            <ion-item ng-repeat="xignal in xignals" ui-sref="tab.graph({id: xignal.id})">
+            <ion-item class="item-icon-right" ng-repeat="xignal in xignals" ui-sref="tab.graph({id: xignal.id})">
                 {{xignal.name}}
+                <i class="icon ion-ios7-arrow-right"></i>
             </ion-item>
         </ion-list>
 

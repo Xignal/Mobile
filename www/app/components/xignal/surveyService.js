@@ -1,18 +1,18 @@
 (function () {
     'use strict';
 
-    angular.module('Home')
-        .factory('HomeService', HomeService);
+    angular.module('Survey')
+        .factory('SurveyService', SurveyService);
 
-    function HomeService($http) {
+    function SurveyService($http) {
         var service = {
-            getXignals: getXignals
+            getXignal : getXignal
         };
 
         return service;
 
-        function getXignals() {
-            var url = 'http://onequickq.azurewebsites.net/surveys?limit=100';
+        function getXignal(id) {
+            var url = 'http://onequickq.azurewebsites.net/surveys/' + id;
             var headers = {"Content-Type": "application/json; charset=utf-8"};
             return $http({method: 'GET', url: url, headers: headers})
                 .success(function (data, status, headers, config) {
@@ -23,6 +23,5 @@
                     return data;
                 });
         }
-
     }
 })();

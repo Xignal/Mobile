@@ -1,8 +1,7 @@
 angular.module('Survey', [])
-    .controller('SurveyCtrl', function ($scope, api, $state, $stateParams) {
+    .controller('SurveyCtrl', function ($scope, api, $state, $stateParams, SurveyService) {
         $scope.survey = api.getSurvey($stateParams.id);
         console.log('Survey: ', $scope.survey);
-
         $scope.comments = [
             { id: 1, response : 'eternal intuitions traps most zens.'},
             { id: 2, response : 'with asparagus drink ketchup.'},
