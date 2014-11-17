@@ -1,4 +1,4 @@
-angular.module('xignal', ['ionic', 'Home', 'ngCordova', 'Survey', 'ngResource'])
+angular.module('xignal', ['ionic', 'Home', 'ngCordova', 'Survey', 'ngResource', 'CreateSurvey'])
 
     .run(function ($ionicPlatform, $cordovaSplashscreen, $rootScope, $ionicLoading) {
         $ionicPlatform.ready(function () {

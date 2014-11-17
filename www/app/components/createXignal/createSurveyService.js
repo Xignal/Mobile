@@ -1,3 +1,6 @@
+// Can't get this service to work - doesn't get injected for some reason
+// and I can't figure out why. Will leave here to review later.
+
 (function () {
     'use strict';
 

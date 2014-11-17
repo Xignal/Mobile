@@ -1,13 +1,13 @@
-<ion-view title="{{ survey.name }}">
+<ion-view title="{{ surveyName }}">
     <ion-content>
         <div class="padding">
             <div class="button-bar">
-                <a class="button button-small" ui-sref="tab.graph({id: survey.id})">Graph</a>
-                <!--<a class="button button-small" ui-sref="tab.comments({id: survey.id})">Comments</a>-->
-                <a class="button button-small" ui-sref="tab.contacts({id: survey.id})">Contacts</a>
+                <a class="button button-small" ui-sref="tab.graph({id: surveyId})">Graph</a>
+                <!--<a class="button button-small" ui-sref="tab.comments({id: surveyId})">Comments</a>-->
+                <a class="button button-small" ui-sref="tab.contacts({id: surveyId})">Contacts</a>
             </div>
             <h3>Contacts</h3>
-            <div ng-repeat="contact in contacts"><p>{{ contact.response }}</p></div>
+            <div ng-repeat="response in responses"><p>{{ response.value }}</p></div>
         </div>
     </ion-content>
 </ion-view>

@@ -13,7 +13,7 @@
         return service;
 
         function getXignal(id) {
-            var url = 'http://onequickq.azurewebsites.net/surveys/' + id;
+            var url = 'http://onequickq.azurewebsites.net/surveys/' + id + '?limit=100';
             var headers = {"Content-Type": "application/json; charset=utf-8"};
             return $http({method: 'GET', url: url, headers: headers})
                 .success(function (data, status, headers, config) {

@@ -1,16 +1,15 @@
-<ion-view title="{{ survey.name }}">
+<ion-view title="{{ surveyName }}">
     <ion-content>
         <div class="padding results">
             <div class="button-bar">
-                <a class="button button-small" ui-sref="tab.graph({id: survey.id})">Results</a>
-                <!--<a class="button button-small" ui-sref="tab.comments({id: survey.id})">Comments</a>-->
-                <a class="button button-small" ui-sref="tab.contacts({id: survey.id})">Contacts</a>
+                <a class="button button-small" ui-sref="tab.graph({id: surveyId})">Graph</a>
+                <!--<a class="button button-small" ui-sref="tab.comments({id: surveyId})">Comments</a>-->
+                <a class="button button-small" ui-sref="tab.contacts({id: surveyId})">Contacts</a>
             </div>
             <p style="margin-top: 1em;">QUESTION</p>
-            <h5 class="question">&ldquo;{{ survey.questions[0].text }}&rdquo;</h5>
-            <p>OVERALL SCORE: From X responses.</p>
-            <div class="score">5.8</div>
-            <pre>{{ survey }}</pre>
+            <h5 class="question">&ldquo;{{ question }}&rdquo;</h5>
+            <p>OVERALL SCORE: From {{ surveyResponsesCount }} responses.</p>
+            <div class="score">{{ surveyAverage | number:2 }}</div>
         </div>
     </ion-content>
 </ion-view>

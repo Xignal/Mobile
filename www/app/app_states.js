@@ -57,7 +57,7 @@ angular.module('xignal')
                 url: '^/settings',
                 views : {
                     'tab-settings' : {
-                        templateUrl : 'app/components/createXignal/create_xignal_index.html'
+                        templateUrl : 'app/components/settings/templates/settings_index.html'
                     }
                 }
             })
