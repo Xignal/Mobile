@@ -1,5 +1,4 @@
-angular.module('xignal', ['ionic', 'Home', 'ngCordova', 'Survey', 'ngResource', 'CreateSurvey'])
-
+angular.module('xignal', ['ionic', 'Home', 'ngCordova', 'Survey', 'ngResource', 'CreateSurvey', 'AppConfig'])
     .run(function ($ionicPlatform, $cordovaSplashscreen, $rootScope, $ionicLoading) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

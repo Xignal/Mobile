@@ -1,11 +1,11 @@
 (function() {
     'use strict';
 
-    angular.module('xignal').service('api', ['$resource', api]);
+    angular.module('xignal').service('api', ['$resource', 'AppConfig', api]);
 
-    function api($resource) {
+    function api($resource, AppConfig) {
 
-        var rootUrl = 'http://www.onequickq.co';
+        var rootUrl = AppConfig.API_HOST;
         var endpoints = {
             'surveys': rootUrl + '/surveys',
             'survey': rootUrl + '/surveys/:id',

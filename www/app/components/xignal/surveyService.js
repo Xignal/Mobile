@@ -4,7 +4,7 @@
     angular.module('Survey')
         .factory('SurveyService', SurveyService);
 
-    function SurveyService($http) {
+    function SurveyService($http, AppConfig) {
         var service = {
             getXignal : getXignal,
             getSurveyAverage: getSurveyAverage
@@ -13,7 +13,7 @@
         return service;
 
         function getXignal(id) {
-            var url = 'http://onequickq.azurewebsites.net/surveys/' + id + '?limit=100';
+            var url = AppConfig.API_HOST + '/' + id + '?limit=' + AppConfig.API_PAGING_LIMIT;
             var headers = {"Content-Type": "application/json; charset=utf-8"};
             return $http({method: 'GET', url: url, headers: headers})
                 .success(function (data, status, headers, config) {
@@ -25,7 +25,7 @@
                 });
         }
         function getSurveyAverage(id) {
-            var url = 'http://onequickq.azurewebsites.net/responses/average/' + id;
+            var url = AppConfig.API_HOST + '/responses/average/' + id;
             var headers = {"Content-Type": "application/json; charset=utf-8"};
             return $http({method: 'GET', url: url, headers: headers})
                 .success(function (data, status, headers, config) {
